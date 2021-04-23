@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphical_user_interface.EditorController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../../DarkTheme.css">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Arquivos">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newFile" text="Novo" />
+
+                        <MenuItem mnemonicParsing="false" onAction="#openFile" text="Carregar" />
+                        <MenuItem mnemonicParsing="false" onAction="#onsave" text="Salvar" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Tamanho da fonte">
+                    <items>
+                        <CheckMenuItem fx:id="small" mnemonicParsing="false" onAction="#fontSize" text="Pequeno ( 14px )" />
+                        <CheckMenuItem fx:id="default" mnemonicParsing="false" onAction="#fontSize" text="Médio ( 22px )" />
+                        <CheckMenuItem fx:id="large" mnemonicParsing="false" onAction="#fontSize" text="Grande ( 30px )" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
